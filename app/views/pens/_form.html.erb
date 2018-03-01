@@ -1,4 +1,4 @@
-<%= form_with(model: pen, local: true) do |form| %>
+<%= form_for @pen, html: { multipart: true } do |form| %>
   <% if pen.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(pen.errors.count, "error") %> prohibited this pen from being saved:</h2>
@@ -34,6 +34,11 @@
   <div class="field">
     <%= form.label :model_no %>
     <%= form.text_field :model_no, id: :pen_model_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="actions">
