@@ -1,37 +1,21 @@
-<p id="notice"><%= notice %></p>
+<% if !user_signed_in? %>
+  <div class="jumbotron">
+    <h1>Have a favorite pen (or pencil)?  Review it here!</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet dolor error qui, amet ipsa nulla similique veniam nam officia, sequi incidunt. Laboriosam quia magnam molestiae, iste, eligendi quidem distinctio itaque.</p>
+    <p><% link_to "Sign up to write a review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+  </div>
+<% end %>
 
-<h1>Pens</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Tip size</th>
-      <th>Ink color</th>
-      <th>Model no</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
+  <% @pens.each do |pen| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= link_to (image_tag pen.image.url(:medium), class: 'image'), pen %>
+        <%= pen.name %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-  <tbody>
-    <% @pens.each do |pen| %>
-      <tr>
-        <td><%= image_tag pen.image.url(:thumb) %></td>
-        <td><%= pen.name %></td>
-        <td><%= pen.description %></td>
-        <td><%= pen.tip_size %></td>
-        <td><%= pen.ink_Color %></td>
-        <td><%= pen.model_no %></td>
-        <td><%= link_to 'Show', pen %></td>
-        <td><%= link_to 'Edit', edit_pen_path(pen) %></td>
-        <td><%= link_to 'Destroy', pen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Pen', new_pen_path %>
