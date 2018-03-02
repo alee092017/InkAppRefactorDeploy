@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Name</th>
       <th>Description</th>
       <th>Tip size</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @pens.each do |pen| %>
       <tr>
+        <td><%= image_tag pen.image.url(:thumb) %></td>
         <td><%= pen.name %></td>
         <td><%= pen.description %></td>
         <td><%= pen.tip_size %></td>
