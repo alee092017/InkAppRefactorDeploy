@@ -17,6 +17,11 @@
 
 body {
   background-color: #E0EEEE;
+  padding-left: 6em;
+  padding-right: 6em;
+}
+.nav {
+  margin-bottom: 1em;
 }
 
 .review_title {
@@ -32,7 +37,7 @@ body {
 
 }
 
-
-.form-group {
-  color: #E0EEEE;
+.btn {
+  color: #337ab7;
+  background-color: #E0EEEE;
 }
