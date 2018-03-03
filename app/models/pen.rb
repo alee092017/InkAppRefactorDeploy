@@ -1,4 +1,5 @@
 class Pen < ApplicationRecord
+  searchkick settings: {blocks: {read_only: false}}
   belongs_to :user
   has_many :reviews
 
