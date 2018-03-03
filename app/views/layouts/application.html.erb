@@ -15,6 +15,7 @@
     <% flash.each do |name, msg| %>
       <%= content_for(:div, msg, class: "alert alert-info")%>
     <% end %>
+
     <%= yield %>
   </body>
 </html>
