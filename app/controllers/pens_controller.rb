@@ -1,8 +1,15 @@
 class PensController < ApplicationController
   before_action :set_pen, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  # GET /pens
-  # GET /pens.json
+
+  def search
+    if params[:search].present?
+      @pens = Pen.search(params[:search], fields: [:name, :description, :tip_size, :model_no, :ink_Color])
+    else
+      @pens = Pen.all
+    end
+  end
+
   def index
     @pens = Pen.all
   end

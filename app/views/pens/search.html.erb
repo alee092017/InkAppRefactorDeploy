@@ -1,0 +1,12 @@
+<div class="row">
+  <% @pens.each do |pen| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= link_to (image_tag pen.image.url(:medium), class: 'image'), pen %>
+        <%= pen.name %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
