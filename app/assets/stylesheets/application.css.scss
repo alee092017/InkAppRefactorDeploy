@@ -17,20 +17,20 @@
 
 body {
   background-color: #E0EEEE;
-  padding-left: 6em;
-  padding-right: 6em;
+  padding-left:4em;
+  padding-right:4em;
 }
 .nav {
   margin-bottom: 1em;
 }
 
-.review_title {
-  margin: 0 0 20px 0;
-}
+// .review_title {
+//   margin: 0 0 22em 0;
+// }
 
 .reviews {
-  padding: 15px 0;
-  border-bottom: 1px solid #EAEAEA;
+  padding: 2em 0;
+  //border-bottom: 1px solid #EAEAEA;
   .star-rating {
   padding-bottom: 8px;
 }

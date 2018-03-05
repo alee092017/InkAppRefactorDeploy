@@ -41,6 +41,9 @@ gem 'paperclip', '~> 5.2', '>= 5.2.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'searchkick', '~> 2.5'
 
+#Heroku Docs specify:
+gem 'rails_12factor', group: :production
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

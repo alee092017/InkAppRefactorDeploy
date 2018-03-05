@@ -2,12 +2,16 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-4">
-        <%= image_tag @pen.image.url(:medium) %>
-        <div class="star-rating" data-score= <%= @avg_review %> ></div>
-        <em><%= "#{@reviews.length} reviews" %></em>
         <div class="table-responsive">
           <table class="table">
             <tbody>
+              <tr>
+                 <%= image_tag @pen.image.url(:medium), class: "img-responsive" %>
+              </tr>
+              <tr>
+                <div class="star-rating" data-score= <%= @avg_review %> ></div>
+                <em><%= "#{@reviews.length} reviews" %></em>
+              </tr>
               <tr>
                 <td><strong>Name:</strong></td>
                 <td><%= @pen.name %></td><br>
@@ -40,7 +44,6 @@
       <div class="col-md-7 col-md-offset-1"></div>
        <h3 class="review_title"><%= @pen.name %></h3>
           <p><%= @pen.description %></p>
-
           <% if @reviews.blank? %>
             <h3>Be the first to review this pen!</h3>
             <%= link_to "Write a Review", new_pen_review_path(@pen), class: "btn btn-danger" %>
