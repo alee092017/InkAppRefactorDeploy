@@ -51,7 +51,7 @@
             <% @reviews.each do |review| %>
               <div class="reviews">
                 <div class="star-rating" data-score= <%= review.rating %> ></div>
-                <p><em>from: </em><%= review.user.email %></p>
+                <p><em>from: </em><%= review.user.name %></p>
                  <p><%= review.review %></p>
               </div>
             <% end %>
