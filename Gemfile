@@ -41,6 +41,7 @@ gem 'paperclip', '~> 5.2', '>= 5.2.1'
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'searchkick', '~> 2.5'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 #Heroku Docs specify:
 gem 'rails_12factor', group: :production
