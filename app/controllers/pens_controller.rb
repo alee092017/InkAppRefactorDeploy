@@ -59,7 +59,7 @@ class PensController < ApplicationController
         format.html { redirect_to @pen, notice: 'Pen was successfully updated.' }
         format.json { render :show, status: :ok, location: @pen }
       else
-        format.html { render :edit }
+        format.html { render :update }
         format.json { render json: @pen.errors, status: :unprocessable_entity }
       end
     end
