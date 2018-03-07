@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.4', '>= 4.4.1'
 #Paperclip for image upload
 gem 'paperclip', '~> 5.2', '>= 5.2.1'
-gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+gem 'aws-sdk', '2.10.47'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'searchkick', '~> 2.5'
 
